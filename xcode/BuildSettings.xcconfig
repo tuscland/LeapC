@@ -1,0 +1,11 @@
+//
+//  BuildSettings.xcconfig
+//  LeapC
+//
+//  Copyright (c) 2013 Camille Troillard. All rights reserved.
+//
+
+SHARED_WARNING_CFLAGS = -Weverything -Wno-float-equal -Wno-c++98-compat-pedantic -Wno-weak-vtables -Wno-padded
+WARNING_CFLAGS = $(SHARED_WARNING_CFLAGS)
+
+EXPORTED_SYMBOLS_FILE = exports.exp

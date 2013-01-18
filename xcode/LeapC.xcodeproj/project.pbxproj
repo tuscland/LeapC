@@ -1,0 +1,410 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9163A95816A8228400B85F4B /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 9163A95716A8228400B85F4B /* main.c */; };
+		9163A96116A822B600B85F4B /* libLeapC.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9183A49216A6B37B00161704 /* libLeapC.dylib */; };
+		9163A99516A98FF000B85F4B /* libLeap.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9163A99416A98FF000B85F4B /* libLeap.dylib */; };
+		9183A4A216A6B44500161704 /* leap_controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9183A4A116A6B44500161704 /* leap_controller.cpp */; };
+		9183A4A616A6B9D100161704 /* leap_frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9183A4A516A6B9D100161704 /* leap_frame.cpp */; };
+		9183A4D316A73C7300161704 /* leap_hand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9183A4D216A73C7300161704 /* leap_hand.cpp */; };
+		9183A4D716A7500E00161704 /* leap_utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9183A4D616A7500E00161704 /* leap_utils.cpp */; };
+		9183A4DD16A7580C00161704 /* leap_pointable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9183A4DC16A7580C00161704 /* leap_pointable.cpp */; };
+		91E4B0FA16A771AA00B5F024 /* leap_c.h in Headers */ = {isa = PBXBuildFile; fileRef = 9183A4E216A762BD00161704 /* leap_c.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		91E4B0FB16A771AD00B5F024 /* leap_types.h in Headers */ = {isa = PBXBuildFile; fileRef = 9183A4DA16A7570500161704 /* leap_types.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		91E4B0FC16A771AF00B5F024 /* leap_pointable.h in Headers */ = {isa = PBXBuildFile; fileRef = 9183A4DB16A7580000161704 /* leap_pointable.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		91E4B0FD16A771B200B5F024 /* leap_hand.h in Headers */ = {isa = PBXBuildFile; fileRef = 9183A4D116A73C3800161704 /* leap_hand.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		91E4B0FE16A771B600B5F024 /* leap_frame.h in Headers */ = {isa = PBXBuildFile; fileRef = 9183A4A416A6B9C700161704 /* leap_frame.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		91E4B0FF16A771C400B5F024 /* leap_controller.h in Headers */ = {isa = PBXBuildFile; fileRef = 9183A4A316A6B45400161704 /* leap_controller.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9163A94F16A8228400B85F4B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		91E4B10016A771E200B5F024 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		9163A95116A8228400B85F4B /* leap-c-test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "leap-c-test"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9163A95416A8228400B85F4B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9163A95716A8228400B85F4B /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		9163A96216A877DA00B85F4B /* exports.exp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.exports; path = exports.exp; sourceTree = "<group>"; };
+		9163A99416A98FF000B85F4B /* libLeap.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libLeap.dylib; sourceTree = "<group>"; };
+		9183A49216A6B37B00161704 /* libLeapC.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libLeapC.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9183A49916A6B39D00161704 /* Leap.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = Leap.h; sourceTree = "<group>"; };
+		9183A49A16A6B39D00161704 /* LeapMath.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = LeapMath.h; sourceTree = "<group>"; };
+		9183A4A116A6B44500161704 /* leap_controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = leap_controller.cpp; sourceTree = "<group>"; };
+		9183A4A316A6B45400161704 /* leap_controller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = leap_controller.h; sourceTree = "<group>"; };
+		9183A4A416A6B9C700161704 /* leap_frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = leap_frame.h; sourceTree = "<group>"; };
+		9183A4A516A6B9D100161704 /* leap_frame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = leap_frame.cpp; sourceTree = "<group>"; };
+		9183A4A816A6BB1D00161704 /* leap_frame_private.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = leap_frame_private.hpp; sourceTree = "<group>"; };
+		9183A4A916A6FD5D00161704 /* BuildSettings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = BuildSettings.xcconfig; sourceTree = "<group>"; };
+		9183A4D116A73C3800161704 /* leap_hand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = leap_hand.h; sourceTree = "<group>"; };
+		9183A4D216A73C7300161704 /* leap_hand.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = leap_hand.cpp; sourceTree = "<group>"; };
+		9183A4D416A73C7F00161704 /* leap_hand_private.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = leap_hand_private.hpp; sourceTree = "<group>"; };
+		9183A4D616A7500E00161704 /* leap_utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = leap_utils.cpp; sourceTree = "<group>"; };
+		9183A4D916A754F500161704 /* leap_utils.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = leap_utils.hpp; sourceTree = "<group>"; };
+		9183A4DA16A7570500161704 /* leap_types.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = leap_types.h; sourceTree = "<group>"; };
+		9183A4DB16A7580000161704 /* leap_pointable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = leap_pointable.h; sourceTree = "<group>"; };
+		9183A4DC16A7580C00161704 /* leap_pointable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = leap_pointable.cpp; sourceTree = "<group>"; };
+		9183A4DE16A7581900161704 /* leap_pointable_private.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = leap_pointable_private.hpp; sourceTree = "<group>"; };
+		9183A4E216A762BD00161704 /* leap_c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = leap_c.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9163A94E16A8228400B85F4B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9163A96116A822B600B85F4B /* libLeapC.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9183A48F16A6B37B00161704 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9163A99516A98FF000B85F4B /* libLeap.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9163A95316A8228400B85F4B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9163A95416A8228400B85F4B /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9163A95616A8228400B85F4B /* example */ = {
+			isa = PBXGroup;
+			children = (
+				9163A95716A8228400B85F4B /* main.c */,
+			);
+			name = example;
+			path = ../example;
+			sourceTree = "<group>";
+		};
+		9163A99216A98F2400B85F4B /* src */ = {
+			isa = PBXGroup;
+			children = (
+				9163A96216A877DA00B85F4B /* exports.exp */,
+				9183A4E216A762BD00161704 /* leap_c.h */,
+				9183A4DA16A7570500161704 /* leap_types.h */,
+				9183A4DB16A7580000161704 /* leap_pointable.h */,
+				9183A4DE16A7581900161704 /* leap_pointable_private.hpp */,
+				9183A4DC16A7580C00161704 /* leap_pointable.cpp */,
+				9183A4D116A73C3800161704 /* leap_hand.h */,
+				9183A4D416A73C7F00161704 /* leap_hand_private.hpp */,
+				9183A4D216A73C7300161704 /* leap_hand.cpp */,
+				9183A4A416A6B9C700161704 /* leap_frame.h */,
+				9183A4A816A6BB1D00161704 /* leap_frame_private.hpp */,
+				9183A4A516A6B9D100161704 /* leap_frame.cpp */,
+				9183A4A316A6B45400161704 /* leap_controller.h */,
+				9183A4A116A6B44500161704 /* leap_controller.cpp */,
+				9183A4D916A754F500161704 /* leap_utils.hpp */,
+				9183A4D616A7500E00161704 /* leap_utils.cpp */,
+			);
+			name = src;
+			path = ../src;
+			sourceTree = "<group>";
+		};
+		9183A48716A6B37B00161704 = {
+			isa = PBXGroup;
+			children = (
+				9183A4A916A6FD5D00161704 /* BuildSettings.xcconfig */,
+				9163A99216A98F2400B85F4B /* src */,
+				9183A4DF16A7628100161704 /* vendor */,
+				9163A95616A8228400B85F4B /* example */,
+				9163A95316A8228400B85F4B /* Frameworks */,
+				9183A49316A6B37B00161704 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9183A49316A6B37B00161704 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9183A49216A6B37B00161704 /* libLeapC.dylib */,
+				9163A95116A8228400B85F4B /* leap-c-test */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9183A4DF16A7628100161704 /* vendor */ = {
+			isa = PBXGroup;
+			children = (
+				9163A99416A98FF000B85F4B /* libLeap.dylib */,
+				9183A49916A6B39D00161704 /* Leap.h */,
+				9183A49A16A6B39D00161704 /* LeapMath.h */,
+			);
+			name = vendor;
+			path = ../vendor;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		9183A49016A6B37B00161704 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91E4B0FA16A771AA00B5F024 /* leap_c.h in Headers */,
+				91E4B0FB16A771AD00B5F024 /* leap_types.h in Headers */,
+				91E4B0FC16A771AF00B5F024 /* leap_pointable.h in Headers */,
+				91E4B0FD16A771B200B5F024 /* leap_hand.h in Headers */,
+				91E4B0FE16A771B600B5F024 /* leap_frame.h in Headers */,
+				91E4B0FF16A771C400B5F024 /* leap_controller.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		9163A95016A8228400B85F4B /* leap-c-test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9163A95D16A8228400B85F4B /* Build configuration list for PBXNativeTarget "leap-c-test" */;
+			buildPhases = (
+				9163A94D16A8228400B85F4B /* Sources */,
+				9163A94E16A8228400B85F4B /* Frameworks */,
+				9163A94F16A8228400B85F4B /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "leap-c-test";
+			productName = "leap-c-test";
+			productReference = 9163A95116A8228400B85F4B /* leap-c-test */;
+			productType = "com.apple.product-type.tool";
+		};
+		9183A49116A6B37B00161704 /* LeapC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9183A49616A6B37B00161704 /* Build configuration list for PBXNativeTarget "LeapC" */;
+			buildPhases = (
+				9183A48E16A6B37B00161704 /* Sources */,
+				9183A48F16A6B37B00161704 /* Frameworks */,
+				9183A49016A6B37B00161704 /* Headers */,
+				91E4B10016A771E200B5F024 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LeapC;
+			productName = LeapC;
+			productReference = 9183A49216A6B37B00161704 /* libLeapC.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9183A48916A6B37B00161704 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = Wildora;
+			};
+			buildConfigurationList = 9183A48C16A6B37B00161704 /* Build configuration list for PBXProject "LeapC" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9183A48716A6B37B00161704;
+			productRefGroup = 9183A49316A6B37B00161704 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9183A49116A6B37B00161704 /* LeapC */,
+				9163A95016A8228400B85F4B /* leap-c-test */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9163A94D16A8228400B85F4B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9163A95816A8228400B85F4B /* main.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9183A48E16A6B37B00161704 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9183A4A216A6B44500161704 /* leap_controller.cpp in Sources */,
+				9183A4A616A6B9D100161704 /* leap_frame.cpp in Sources */,
+				9183A4D316A73C7300161704 /* leap_hand.cpp in Sources */,
+				9183A4D716A7500E00161704 /* leap_utils.cpp in Sources */,
+				9183A4DD16A7580C00161704 /* leap_pointable.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		9163A95E16A8228400B85F4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "leap-c-test/leap-c-test-Prefix.pch";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../resources/lib\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9163A95F16A8228400B85F4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "leap-c-test/leap-c-test-Prefix.pch";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../resources/lib\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		9183A49416A6B37B00161704 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9183A4A916A6FD5D00161704 /* BuildSettings.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		9183A49516A6B37B00161704 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9183A4A916A6FD5D00161704 /* BuildSettings.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		9183A49716A6B37B00161704 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				EXPORTED_SYMBOLS_FILE = "$(SRCROOT)/../src/exports.exp";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../vendor\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9183A49816A6B37B00161704 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				EXPORTED_SYMBOLS_FILE = "$(SRCROOT)/../src/exports.exp";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../vendor\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9163A95D16A8228400B85F4B /* Build configuration list for PBXNativeTarget "leap-c-test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9163A95E16A8228400B85F4B /* Debug */,
+				9163A95F16A8228400B85F4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9183A48C16A6B37B00161704 /* Build configuration list for PBXProject "LeapC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9183A49416A6B37B00161704 /* Debug */,
+				9183A49516A6B37B00161704 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9183A49616A6B37B00161704 /* Build configuration list for PBXNativeTarget "LeapC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9183A49716A6B37B00161704 /* Debug */,
+				9183A49816A6B37B00161704 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9183A48916A6B37B00161704 /* Project object */;
+}
