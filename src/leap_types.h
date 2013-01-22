@@ -25,8 +25,6 @@
 extern "C" {
 #endif
 
-    typedef struct leap_finger* leap_finger_ref;
-    typedef struct leap_tool* leap_tool_ref;
     typedef struct leap_pointable* leap_pointable_ref;
     typedef struct leap_hand* leap_hand_ref;
     typedef struct leap_frame* leap_frame_ref;
