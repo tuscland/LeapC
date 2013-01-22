@@ -15,6 +15,7 @@
 		9183A4D316A73C7300161704 /* leap_hand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9183A4D216A73C7300161704 /* leap_hand.cpp */; };
 		9183A4D716A7500E00161704 /* leap_utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9183A4D616A7500E00161704 /* leap_utils.cpp */; };
 		9183A4DD16A7580C00161704 /* leap_pointable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9183A4DC16A7580C00161704 /* leap_pointable.cpp */; };
+		91A1D44116AF41620038F278 /* libLeap.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9163A99416A98FF000B85F4B /* libLeap.dylib */; };
 		91E4B0FA16A771AA00B5F024 /* leap_c.h in Headers */ = {isa = PBXBuildFile; fileRef = 9183A4E216A762BD00161704 /* leap_c.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		91E4B0FB16A771AD00B5F024 /* leap_types.h in Headers */ = {isa = PBXBuildFile; fileRef = 9183A4DA16A7570500161704 /* leap_types.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		91E4B0FC16A771AF00B5F024 /* leap_pointable.h in Headers */ = {isa = PBXBuildFile; fileRef = 9183A4DB16A7580000161704 /* leap_pointable.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -26,12 +27,13 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		9163A94F16A8228400B85F4B /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 16;
 			files = (
+				91A1D44116AF41620038F278 /* libLeap.dylib in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 		91E4B10016A771E200B5F024 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -273,11 +275,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "leap-c-test/leap-c-test-Prefix.pch";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../../resources/lib\"",
-				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -286,18 +283,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "leap-c-test/leap-c-test-Prefix.pch";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../../resources/lib\"",
-				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
 		9183A49416A6B37B00161704 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9183A4A916A6FD5D00161704 /* BuildSettings.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
@@ -327,7 +318,6 @@
 		};
 		9183A49516A6B37B00161704 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9183A4A916A6FD5D00161704 /* BuildSettings.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
@@ -350,6 +340,7 @@
 		};
 		9183A49716A6B37B00161704 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9183A4A916A6FD5D00161704 /* BuildSettings.xcconfig */;
 			buildSettings = {
 				EXECUTABLE_PREFIX = lib;
 				EXPORTED_SYMBOLS_FILE = "$(SRCROOT)/../src/exports.exp";
@@ -363,6 +354,7 @@
 		};
 		9183A49816A6B37B00161704 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9183A4A916A6FD5D00161704 /* BuildSettings.xcconfig */;
 			buildSettings = {
 				EXECUTABLE_PREFIX = lib;
 				EXPORTED_SYMBOLS_FILE = "$(SRCROOT)/../src/exports.exp";
