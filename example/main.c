@@ -43,6 +43,25 @@ void on_frame(leap_controller_ref controller, void *user_info)
 {
     leap_frame_ref frame = leap_controller_copy_frame(controller, 0);
     printf("frame %llu\n", leap_frame_timestamp(frame));
+
+    for (int i = 0; i < leap_frame_hands_count(frame); i++) {
+        leap_hand_ref hand = leap_frame_hand_at_index(frame, i);
+        printf("\thand %i: fingers=%i\n", leap_hand_id(hand), leap_hand_fingers_count(hand));
+
+        for (int p = 0; p < leap_hand_fingers_count(hand); p++) {
+            leap_pointable_ref pointable = leap_hand_finger_at_index(hand, p);
+            leap_vector tip_position = leap_pointable_tip_position(pointable);
+            printf("\t\tfinger %i: tip-pos={%0.2f, %0.2f, %0.2f}\n",
+                   leap_pointable_id(pointable), tip_position.x, tip_position.y, tip_position.z);
+        }
+
+        for (int p = 0; p < leap_hand_tools_count(hand); p++) {
+            leap_pointable_ref pointable = leap_hand_tool_at_index(hand, p);
+            leap_vector tip_position = leap_pointable_tip_position(pointable);
+            printf("\t\ttool   %i: tip-pos={%0.2f, %0.2f, %0.2f}\n",
+                   leap_pointable_id(pointable), tip_position.x, tip_position.y, tip_position.z);
+        }
+    }
     leap_frame_delete(frame);
 }
 
