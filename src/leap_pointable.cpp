@@ -42,19 +42,19 @@ int32_t leap_pointable_id(leap_pointable_ref pointable)
     return W(pointable).id();
 }
 
-leap_vector leap_pointable_tip_position(leap_pointable_ref pointable)
+void leap_pointable_tip_position(leap_pointable_ref pointable, leap_vector *result)
 {
-    return to_leap_vector(W(pointable).tipPosition());
+    *result = to_leap_vector(W(pointable).tipPosition());
 }
 
-leap_vector leap_pointable_tip_velocity(leap_pointable_ref pointable)
+void leap_pointable_tip_velocity(leap_pointable_ref pointable, leap_vector *result)
 {
-    return to_leap_vector(W(pointable).tipVelocity());
+    *result = to_leap_vector(W(pointable).tipVelocity());
 }
 
-leap_vector leap_pointable_direction(leap_pointable_ref pointable)
+void leap_pointable_direction(leap_pointable_ref pointable, leap_vector *result)
 {
-    return to_leap_vector(W(pointable).direction());
+    *result = to_leap_vector(W(pointable).direction());
 }
 
 float leap_pointable_width(leap_pointable_ref pointable)

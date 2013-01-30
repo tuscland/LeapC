@@ -31,11 +31,11 @@ extern "C" {
     leap_pointable_ref leap_hand_finger_at_index(leap_hand_ref hand, int index);
     int leap_hand_tools_count(leap_hand_ref hand);
     leap_pointable_ref leap_hand_tool_at_index(leap_hand_ref hand, int index);
-    leap_vector leap_hand_palm_position(leap_hand_ref hand);
-    leap_vector leap_hand_palm_normal(leap_hand_ref hand);
-    leap_vector leap_hand_palm_velocity(leap_hand_ref hand);
-    leap_vector leap_hand_direction(leap_hand_ref hand);
-    leap_vector leap_hand_sphere_center(leap_hand_ref hand);
+    void leap_hand_palm_position(leap_hand_ref hand, leap_vector *result);
+    void leap_hand_palm_normal(leap_hand_ref hand, leap_vector *result);
+    void leap_hand_palm_velocity(leap_hand_ref hand, leap_vector *result);
+    void leap_hand_direction(leap_hand_ref hand, leap_vector *result);
+    void leap_hand_sphere_center(leap_hand_ref hand, leap_vector *result);
     float leap_hand_sphere_radius(leap_hand_ref hand);
     int leap_hand_is_valid(leap_hand_ref hand);
     int leap_hand_equal(leap_hand_ref hand, leap_hand_ref other);

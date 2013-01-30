@@ -27,9 +27,9 @@ extern "C" {
 #endif
 
     int32_t leap_pointable_id(leap_pointable_ref pointable);
-    leap_vector leap_pointable_tip_position(leap_pointable_ref pointable);
-    leap_vector leap_pointable_tip_velocity(leap_pointable_ref pointable);
-    leap_vector leap_pointable_direction(leap_pointable_ref pointable);
+    void leap_pointable_tip_position(leap_pointable_ref pointable, leap_vector *result);
+    void leap_pointable_tip_velocity(leap_pointable_ref pointable, leap_vector *result);
+    void leap_pointable_direction(leap_pointable_ref pointable, leap_vector *result);
     float leap_pointable_width(leap_pointable_ref pointable);
     float leap_pointable_length(leap_pointable_ref pointable);
     int leap_pointable_is_tool(leap_pointable_ref pointable);

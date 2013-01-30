@@ -21,9 +21,9 @@
 
 leap_vector to_leap_vector(Leap::Vector const& vector)
 {
-    return leap_vector({
+    return (leap_vector){
         vector.x,
         vector.y,
         vector.z
-    });
+    };
 }

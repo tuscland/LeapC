@@ -56,7 +56,7 @@ void delete_pointables(leap_pointable_list& pointables)
 void leap_hand_initialize(leap_hand_ref hand)
 {
     add_pointables(W(hand).fingers(), hand->fingers);
-    add_pointables(W(hand).tools(), hand->fingers);
+    add_pointables(W(hand).tools(), hand->tools);
 }
 
 leap_hand_ref leap_hand_new(Leap::Hand const& hand)
@@ -98,29 +98,29 @@ leap_pointable_ref leap_hand_tool_at_index(leap_hand_ref hand, int index)
     return hand->tools[index];
 }
 
-leap_vector leap_hand_palm_position(leap_hand_ref hand)
+void leap_hand_palm_position(leap_hand_ref hand, leap_vector *result)
 {
-    return to_leap_vector(W(hand).palmPosition());
+    *result = to_leap_vector(W(hand).palmPosition());
 }
 
-leap_vector leap_hand_palm_normal(leap_hand_ref hand)
+void leap_hand_palm_normal(leap_hand_ref hand, leap_vector *result)
 {
-    return to_leap_vector(W(hand).palmNormal());
+    *result = to_leap_vector(W(hand).palmNormal());
 }
 
-leap_vector leap_hand_palm_velocity(leap_hand_ref hand)
+void leap_hand_palm_velocity(leap_hand_ref hand, leap_vector *result)
 {
-    return to_leap_vector(W(hand).palmVelocity());
+    *result = to_leap_vector(W(hand).palmVelocity());
 }
 
-leap_vector leap_hand_direction(leap_hand_ref hand)
+void leap_hand_direction(leap_hand_ref hand, leap_vector *result)
 {
-    return to_leap_vector(W(hand).direction());
+    *result = to_leap_vector(W(hand).direction());
 }
 
-leap_vector leap_hand_sphere_center(leap_hand_ref hand)
+void leap_hand_sphere_center(leap_hand_ref hand, leap_vector *result)
 {
-    return to_leap_vector(W(hand).sphereCenter());
+    *result = to_leap_vector(W(hand).sphereCenter());
 }
 
 float leap_hand_sphere_radius(leap_hand_ref hand)
