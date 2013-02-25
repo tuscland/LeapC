@@ -16,27 +16,11 @@
  *
  */
 
-#ifndef LeapC_leap_utils_hpp
-#define LeapC_leap_utils_hpp
+#ifndef LeapC_leap_gesture_private_hpp
+#define LeapC_leap_gesture_private_hpp
 
-#include "leap_types.h"
+#include "leap_gesture.h"
 
-#define W(o) (o->wrap)
-
-inline
-Leap::Vector from_vector(leap_vector const vector)
-{
-    return Leap::Vector(vector.x, vector.y, vector.z);
-}
-
-inline
-leap_vector to_vector(Leap::Vector const& vector)
-{
-    return {
-        vector.x,
-        vector.y,
-        vector.z
-    };
-}
+leap_gesture_ref leap_gesture_new(Leap::Gesture const& gesture);
 
 #endif

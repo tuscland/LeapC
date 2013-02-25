@@ -27,6 +27,7 @@ extern "C" {
 
     typedef struct leap_pointable* leap_pointable_ref;
     typedef struct leap_hand* leap_hand_ref;
+    typedef struct leap_gesture* leap_gesture_ref;
     typedef struct leap_frame* leap_frame_ref;
     typedef struct leap_controller* leap_controller_ref;
     typedef struct leap_listener* leap_listener_ref;
@@ -37,6 +38,14 @@ extern "C" {
         float z;
     };
     typedef struct _leap_vector leap_vector;
+
+    typedef enum {
+        LEAP_GESTURE_TYPE_INVALID    = -1,
+        LEAP_GESTURE_TYPE_SWIPE      =  1,
+        LEAP_GESTURE_TYPE_CIRCLE     =  4,
+        LEAP_GESTURE_TYPE_SCREEN_TAP =  5,
+        LEAP_GESTURE_TYPE_KEY_TAP    =  6
+    } leap_gesture_type;
 
 #ifdef __cplusplus
 } /* closing brace for extern "C" */

@@ -25,7 +25,7 @@
 extern "C" {
 #endif
 
-    // Controller
+    /* Controller */
     leap_controller_ref leap_controller_new();
     void leap_controller_delete(leap_controller_ref controller);
 
@@ -33,8 +33,10 @@ extern "C" {
     leap_frame_ref leap_controller_copy_frame(leap_controller_ref controller, int history);
     void leap_controller_add_listener(leap_controller_ref controller, leap_listener_ref listener);
     void leap_controller_remove_listener(leap_controller_ref controller, leap_listener_ref listener);
+    void leap_controller_enable_gesture(leap_controller_ref controller, leap_gesture_type gesture_type, int should_enable);
+    int leap_controller_is_gesture_enabled(leap_controller_ref controller, leap_gesture_type gesture_type);
 
-    // Listener
+    /* Listener */
     typedef void (*leap_controller_callback)(leap_controller_ref, void*);
 
     struct leap_controller_callbacks {

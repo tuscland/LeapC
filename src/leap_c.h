@@ -22,6 +22,7 @@
 #include "leap_types.h"
 #include "leap_pointable.h"
 #include "leap_hand.h"
+#include "leap_gesture.h"
 #include "leap_frame.h"
 #include "leap_controller.h"
 

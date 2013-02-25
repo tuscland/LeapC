@@ -22,12 +22,13 @@
 #include "leap_utils.hpp"
 #include "leap_frame_private.hpp"
 #include "leap_hand_private.hpp"
+#include "leap_gesture_private.hpp"
 
 typedef std::vector<leap_hand_ref> leap_hand_list;
+typedef std::vector<leap_gesture_ref> leap_gesture_list;
 
 struct leap_frame
 {
-public:
     leap_frame(Leap::Frame const& frame)
     	: wrap(frame)
     	, retain_count(1)
@@ -36,6 +37,7 @@ public:
     Leap::Frame wrap;
     int retain_count;
     leap_hand_list hands;
+    leap_gesture_list gestures;
 };
 
 void leap_frame_initialize(leap_frame_ref frame)
@@ -45,6 +47,13 @@ void leap_frame_initialize(leap_frame_ref frame)
          it != w_hands.end();
          ++it) {
         frame->hands.push_back(leap_hand_new(*it));
+    }
+
+    Leap::GestureList const& w_gestures = W(frame).gestures();
+    for (Leap::GestureList::const_iterator it = w_gestures.begin();
+         it != w_gestures.end();
+         ++it) {
+        frame->gestures.push_back(leap_gesture_new(*it));
     }
 }
 
@@ -90,7 +99,7 @@ int64_t leap_frame_timestamp(leap_frame_ref frame)
 
 int leap_frame_hands_count(leap_frame_ref frame)
 {
-    return (int)frame->hands.size();
+    return frame->hands.size();
 }
 
 leap_hand_ref leap_frame_hand_at_index(leap_frame_ref frame, int index)
@@ -98,14 +107,24 @@ leap_hand_ref leap_frame_hand_at_index(leap_frame_ref frame, int index)
     return frame->hands[index];
 }
 
+int leap_frame_gestures_count(leap_frame_ref frame)
+{
+    return frame->gestures.size();
+}
+
+leap_gesture_ref leap_frame_gesture_at_index(leap_frame_ref frame, int index)
+{
+    return frame->gestures[index];
+}
+
 int leap_frame_is_valid(leap_frame_ref frame)
 {
-    return bool_as_int(W(frame).isValid());
+    return W(frame).isValid();
 }
 
 int leap_frame_equal(leap_frame_ref frame, leap_frame_ref other)
 {
-    return bool_as_int(W(frame) == W(other));
+    return W(frame) == W(other);
 }
 
 Leap::Frame const& from_frame(leap_frame_ref frame)

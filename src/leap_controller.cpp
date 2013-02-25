@@ -25,7 +25,6 @@
 
 struct leap_controller
 {
-public:
     leap_controller() : wrap() {}
     Leap::Controller wrap;
 };
@@ -85,7 +84,6 @@ private:
 
 struct leap_listener
 {
-public:
     leap_listener(struct leap_controller_callbacks const& callbacks, void* user_info)
     	: wrap(callbacks, user_info) {}
     Listener wrap;
@@ -103,7 +101,7 @@ void leap_controller_delete(leap_controller_ref controller)
 
 int leap_controller_is_connected(leap_controller_ref controller)
 {
-    return bool_as_int(W(controller).isConnected());
+    return W(controller).isConnected();
 }
 
 leap_frame_ref leap_controller_copy_frame(leap_controller_ref controller, int history)
@@ -124,6 +122,16 @@ void leap_controller_remove_listener(leap_controller_ref controller, leap_listen
     assert(W(listener).getController() != 0);
     W(controller).removeListener(W(listener));
     W(listener).setController(0);
+}
+
+void leap_controller_enable_gesture(leap_controller_ref controller, leap_gesture_type gesture_type, int should_enable)
+{
+    W(controller).enableGesture(Leap::Gesture::Type(gesture_type), should_enable != 0);
+}
+
+int leap_controller_is_gesture_enabled(leap_controller_ref controller, leap_gesture_type gesture_type)
+{
+    return W(controller).isGestureEnabled(Leap::Gesture::Type(gesture_type));
 }
 
 leap_listener_ref leap_listener_new(struct leap_controller_callbacks* callbacks, void *user_data)

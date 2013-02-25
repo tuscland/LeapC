@@ -22,7 +22,6 @@
 
 struct leap_pointable
 {
-public:
     leap_pointable(Leap::Pointable const& pointable)
     	: wrap(pointable)
 	    , retain_count(1)
@@ -87,20 +86,20 @@ float leap_pointable_length(leap_pointable_ref pointable)
 
 int leap_pointable_is_tool(leap_pointable_ref pointable)
 {
-    return bool_as_int(W(pointable).isTool());
+    return W(pointable).isTool();
 }
 
 int leap_pointable_is_finger(leap_pointable_ref pointable)
 {
-    return bool_as_int(W(pointable).isFinger());
+    return W(pointable).isFinger();
 }
 
 int leap_pointable_is_valid(leap_pointable_ref pointable)
 {
-    return bool_as_int(W(pointable).isValid());
+    return W(pointable).isValid();
 }
 
 int leap_pointable_equal(leap_pointable_ref pointable, leap_pointable_ref other)
 {
-    return bool_as_int(W(pointable) == W(other));
+    return W(pointable) == W(other);
 }

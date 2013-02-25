@@ -26,7 +26,6 @@ typedef std::vector<leap_pointable_ref> leap_pointable_list;
 
 struct leap_hand
 {
-public:
     leap_hand(Leap::Hand const& hand)
     	: wrap(hand)
     	, retain_count(1)
@@ -172,10 +171,10 @@ float leap_hand_scale_factor(leap_hand_ref hand, leap_frame_ref since_frame)
 
 int leap_hand_is_valid(leap_hand_ref hand)
 {
-    return bool_as_int(W(hand).isValid());
+    return W(hand).isValid();
 }
 
 int leap_hand_equal(leap_hand_ref hand, leap_hand_ref other)
 {
-    return bool_as_int(W(hand) == W(other));
+    return W(hand) == W(other);
 }

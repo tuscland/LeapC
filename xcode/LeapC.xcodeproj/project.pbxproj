@@ -16,6 +16,8 @@
 		9183A4D716A7500E00161704 /* leap_utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9183A4D616A7500E00161704 /* leap_utils.cpp */; };
 		9183A4DD16A7580C00161704 /* leap_pointable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9183A4DC16A7580C00161704 /* leap_pointable.cpp */; };
 		91A1D44116AF41620038F278 /* libLeap.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9163A99416A98FF000B85F4B /* libLeap.dylib */; };
+		91ADC9A716DBCF5C00824A88 /* leap_gesture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 91ADC9A516DBCF5C00824A88 /* leap_gesture.cpp */; };
+		91ADC9A816DBCF5C00824A88 /* leap_gesture.h in Headers */ = {isa = PBXBuildFile; fileRef = 91ADC9A616DBCF5C00824A88 /* leap_gesture.h */; };
 		91E4B0FA16A771AA00B5F024 /* leap_c.h in Headers */ = {isa = PBXBuildFile; fileRef = 9183A4E216A762BD00161704 /* leap_c.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		91E4B0FB16A771AD00B5F024 /* leap_types.h in Headers */ = {isa = PBXBuildFile; fileRef = 9183A4DA16A7570500161704 /* leap_types.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		91E4B0FC16A771AF00B5F024 /* leap_pointable.h in Headers */ = {isa = PBXBuildFile; fileRef = 9183A4DB16A7580000161704 /* leap_pointable.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -71,6 +73,9 @@
 		9183A4DC16A7580C00161704 /* leap_pointable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = leap_pointable.cpp; sourceTree = "<group>"; };
 		9183A4DE16A7581900161704 /* leap_pointable_private.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = leap_pointable_private.hpp; sourceTree = "<group>"; };
 		9183A4E216A762BD00161704 /* leap_c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = leap_c.h; sourceTree = "<group>"; };
+		91ADC9A516DBCF5C00824A88 /* leap_gesture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = leap_gesture.cpp; sourceTree = "<group>"; };
+		91ADC9A616DBCF5C00824A88 /* leap_gesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = leap_gesture.h; sourceTree = "<group>"; };
+		91ADC9A916DBD20B00824A88 /* leap_gesture_private.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = leap_gesture_private.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +127,9 @@
 				9183A4D116A73C3800161704 /* leap_hand.h */,
 				9183A4D416A73C7F00161704 /* leap_hand_private.hpp */,
 				9183A4D216A73C7300161704 /* leap_hand.cpp */,
+				91ADC9A616DBCF5C00824A88 /* leap_gesture.h */,
+				91ADC9A916DBD20B00824A88 /* leap_gesture_private.hpp */,
+				91ADC9A516DBCF5C00824A88 /* leap_gesture.cpp */,
 				9183A4A416A6B9C700161704 /* leap_frame.h */,
 				9183A4A816A6BB1D00161704 /* leap_frame_private.hpp */,
 				9183A4A516A6B9D100161704 /* leap_frame.cpp */,
@@ -179,6 +187,7 @@
 				91E4B0FD16A771B200B5F024 /* leap_hand.h in Headers */,
 				91E4B0FE16A771B600B5F024 /* leap_frame.h in Headers */,
 				91E4B0FF16A771C400B5F024 /* leap_controller.h in Headers */,
+				91ADC9A816DBCF5C00824A88 /* leap_gesture.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +274,7 @@
 				9183A4D316A73C7300161704 /* leap_hand.cpp in Sources */,
 				9183A4D716A7500E00161704 /* leap_utils.cpp in Sources */,
 				9183A4DD16A7580C00161704 /* leap_pointable.cpp in Sources */,
+				91ADC9A716DBCF5C00824A88 /* leap_gesture.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

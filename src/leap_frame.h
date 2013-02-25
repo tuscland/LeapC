@@ -34,6 +34,9 @@ extern "C" {
     int leap_frame_hands_count(leap_frame_ref frame);
     leap_hand_ref leap_frame_hand_at_index(leap_frame_ref frame, int index);
 
+    int leap_frame_gestures_count(leap_frame_ref frame);
+    leap_gesture_ref leap_frame_gesture_at_index(leap_frame_ref frame, int index);
+
     int leap_frame_is_valid(leap_frame_ref frame);
     int leap_frame_equal(leap_frame_ref frame, leap_frame_ref other);
 
