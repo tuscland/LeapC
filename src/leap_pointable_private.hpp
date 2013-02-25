@@ -22,6 +22,5 @@
 #include "leap_pointable.h"
 
 leap_pointable_ref leap_pointable_new(Leap::Pointable const& pointable);
-void leap_pointable_delete(leap_pointable_ref tool);
 
 #endif

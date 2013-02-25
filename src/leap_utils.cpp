@@ -19,9 +19,14 @@
 #include "Leap.h"
 #include "leap_utils.hpp"
 
-leap_vector to_leap_vector(Leap::Vector const& vector)
+Leap::Vector from_vector(leap_vector const vector)
 {
-    return (leap_vector){
+    return Leap::Vector(vector.x, vector.y, vector.z);
+}
+
+leap_vector to_vector(Leap::Vector const& vector)
+{
+    return {
         vector.x,
         vector.y,
         vector.z

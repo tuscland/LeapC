@@ -23,6 +23,5 @@
 #include "leap_hand.h"
 
 leap_hand_ref leap_hand_new(Leap::Hand const& hand);
-void leap_hand_delete(leap_hand_ref hand);
 
 #endif

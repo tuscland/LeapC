@@ -26,7 +26,7 @@
 struct leap_controller
 {
 public:
-    leap_controller() : wrap() {};
+    leap_controller() : wrap() {}
     Leap::Controller wrap;
 };
 
@@ -48,28 +48,38 @@ public:
     }
 
     virtual void onInit(Leap::Controller const& controller) {
-        _callbacks.on_init(_controller, _user_info);
+        if (_callbacks.on_init != NULL) {
+            _callbacks.on_init(_controller, _user_info);
+        }
     }
 
     virtual void onConnect(Leap::Controller const& controller) {
-        _callbacks.on_connect(_controller, _user_info);
+        if (_callbacks.on_connect != NULL) {
+            _callbacks.on_connect(_controller, _user_info);
+        }
     }
 
     virtual void onDisconnect(Leap::Controller const& controller) {
-        _callbacks.on_disconnect(_controller, _user_info);
+        if (_callbacks.on_disconnect != NULL) {
+            _callbacks.on_disconnect(_controller, _user_info);
+        }
     }
 
     virtual void onExit(Leap::Controller const& controller) {
-        _callbacks.on_exit(_controller, _user_info);
+        if (_callbacks.on_exit != NULL) {
+            _callbacks.on_exit(_controller, _user_info);
+        }
     }
 
     virtual void onFrame(Leap::Controller const& controller) {
-        _callbacks.on_frame(_controller, _user_info);
+        if (_callbacks.on_frame != NULL) {
+            _callbacks.on_frame(_controller, _user_info);
+        }
     }
 
 private:
     struct leap_controller_callbacks _callbacks;
-    void* _user_info;
+    void* const _user_info;
     leap_controller_ref _controller;
 };
 

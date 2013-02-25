@@ -28,6 +28,7 @@ extern "C" {
     // Controller
     leap_controller_ref leap_controller_new();
     void leap_controller_delete(leap_controller_ref controller);
+
     int leap_controller_is_connected(leap_controller_ref controller);
     leap_frame_ref leap_controller_copy_frame(leap_controller_ref controller, int history);
     void leap_controller_add_listener(leap_controller_ref controller, leap_listener_ref listener);

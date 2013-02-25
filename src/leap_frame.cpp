@@ -30,9 +30,11 @@ struct leap_frame
 public:
     leap_frame(Leap::Frame const& frame)
     	: wrap(frame)
+    	, retain_count(1)
     {}
 
     Leap::Frame wrap;
+    int retain_count;
     leap_hand_list hands;
 };
 
@@ -53,14 +55,27 @@ leap_frame_ref leap_frame_copy(Leap::Frame const& frame)
     return result;
 }
 
+void leap_frame_retain(leap_frame_ref frame)
+{
+    frame->retain_count++;
+}
+
 void leap_frame_delete(leap_frame_ref frame)
 {
     for (leap_hand_list::const_iterator it = frame->hands.begin();
          it != frame->hands.end();
          ++it) {
-        leap_hand_delete(*it);
+        leap_hand_release(*it);
     }
     delete frame;
+}
+
+void leap_frame_release(leap_frame_ref frame)
+{
+    frame->retain_count--;
+    if (frame->retain_count == 0) {
+        leap_frame_delete(frame);
+    }
 }
 
 int64_t leap_frame_id(leap_frame_ref frame)
@@ -91,4 +106,9 @@ int leap_frame_is_valid(leap_frame_ref frame)
 int leap_frame_equal(leap_frame_ref frame, leap_frame_ref other)
 {
     return bool_as_int(W(frame) == W(other));
+}
+
+Leap::Frame const& from_frame(leap_frame_ref frame)
+{
+    return W(frame);
 }

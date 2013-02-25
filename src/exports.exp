@@ -3,6 +3,8 @@
 #
 #  Copyright (c) 2013 Camille Troillard. All rights reserved.
 
+_leap_pointable_retain
+_leap_pointable_release
 _leap_pointable_id
 _leap_pointable_tip_position
 _leap_pointable_tip_velocity
@@ -14,6 +16,8 @@ _leap_pointable_is_finger
 _leap_pointable_is_valid
 _leap_pointable_equal
 
+_leap_hand_retain
+_leap_hand_release
 _leap_hand_id
 _leap_hand_fingers_count
 _leap_hand_finger_at_index
@@ -25,10 +29,16 @@ _leap_hand_palm_velocity
 _leap_hand_direction
 _leap_hand_sphere_center
 _leap_hand_sphere_radius
+_leap_hand_translation
+_leap_hand_rotation_axis
+_leap_hand_rotation_angle
+_leap_hand_rotation_angle_around_axis
+_leap_hand_scale_factor
 _leap_hand_is_valid
 _leap_hand_equal
 
-_leap_frame_delete
+_leap_frame_retain
+_leap_frame_release
 _leap_frame_id
 _leap_frame_timestamp
 _leap_frame_hands_count

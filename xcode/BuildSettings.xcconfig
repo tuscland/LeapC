@@ -12,7 +12,7 @@ MACOSX_DEPLOYMENT_TARGET = 10.6
 CLANG_CXX_LIBRARY = libstdc++
 CLANG_CXX_LANGUAGE_STANDARD = c++98
 
-SHARED_WARNING_CFLAGS = -Weverything -Wno-float-equal -Wno-c++98-compat-pedantic -Wno-weak-vtables -Wno-padded
+SHARED_WARNING_CFLAGS = -Weverything -Wno-float-equal -Wno-c++98-compat-pedantic -Wno-weak-vtables -Wno-padded -Wno-documentation
 WARNING_CFLAGS = $(SHARED_WARNING_CFLAGS)
 
 EXPORTED_SYMBOLS_FILE = exports.exp

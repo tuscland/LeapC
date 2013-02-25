@@ -22,5 +22,6 @@
 #include "leap_frame.h"
 
 leap_frame_ref leap_frame_copy(Leap::Frame const& frame);
+Leap::Frame const& from_frame(leap_frame_ref frame);
 
 #endif

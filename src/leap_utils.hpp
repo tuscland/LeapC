@@ -24,6 +24,7 @@
 #define W(o) (o->wrap)
 #define bool_as_int(expr) (((expr) == true) ? 1 : 0)
 
-leap_vector to_leap_vector(Leap::Vector const& vector);
+Leap::Vector from_vector(leap_vector const vector);
+leap_vector to_vector(Leap::Vector const& vector);
 
 #endif

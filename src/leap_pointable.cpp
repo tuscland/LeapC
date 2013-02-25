@@ -23,8 +23,13 @@
 struct leap_pointable
 {
 public:
-    leap_pointable(Leap::Pointable const& pointable) : wrap(pointable) {}
+    leap_pointable(Leap::Pointable const& pointable)
+    	: wrap(pointable)
+	    , retain_count(1)
+    {}
+
     Leap::Pointable wrap;
+    int retain_count;
 };
 
 leap_pointable_ref leap_pointable_new(Leap::Pointable const& pointable)
@@ -32,9 +37,22 @@ leap_pointable_ref leap_pointable_new(Leap::Pointable const& pointable)
     return new leap_pointable(pointable);
 }
 
+void leap_pointable_retain(leap_pointable_ref pointable)
+{
+    pointable->retain_count++;
+}
+
 void leap_pointable_delete(leap_pointable_ref pointable)
 {
     delete pointable;
+}
+
+void leap_pointable_release(leap_pointable_ref pointable)
+{
+    pointable->retain_count--;
+    if (pointable->retain_count == 0) {
+        leap_pointable_delete(pointable);
+    }
 }
 
 int32_t leap_pointable_id(leap_pointable_ref pointable)
@@ -42,19 +60,19 @@ int32_t leap_pointable_id(leap_pointable_ref pointable)
     return W(pointable).id();
 }
 
-void leap_pointable_tip_position(leap_pointable_ref pointable, leap_vector *result)
+void leap_pointable_tip_position(leap_pointable_ref pointable, leap_vector *out_result)
 {
-    *result = to_leap_vector(W(pointable).tipPosition());
+    *out_result = to_vector(W(pointable).tipPosition());
 }
 
-void leap_pointable_tip_velocity(leap_pointable_ref pointable, leap_vector *result)
+void leap_pointable_tip_velocity(leap_pointable_ref pointable, leap_vector *out_result)
 {
-    *result = to_leap_vector(W(pointable).tipVelocity());
+    *out_result = to_vector(W(pointable).tipVelocity());
 }
 
-void leap_pointable_direction(leap_pointable_ref pointable, leap_vector *result)
+void leap_pointable_direction(leap_pointable_ref pointable, leap_vector *out_result)
 {
-    *result = to_leap_vector(W(pointable).direction());
+    *out_result = to_vector(W(pointable).direction());
 }
 
 float leap_pointable_width(leap_pointable_ref pointable)

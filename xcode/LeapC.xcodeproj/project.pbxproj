@@ -226,7 +226,7 @@
 		9183A48916A6B37B00161704 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0450;
+				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = Wildora;
 			};
 			buildConfigurationList = 9183A48C16A6B37B00161704 /* Build configuration list for PBXProject "LeapC" */;
@@ -332,6 +332,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9183A4A916A6FD5D00161704 /* BuildSettings.xcconfig */;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				EXECUTABLE_PREFIX = lib;
 				EXPORTED_SYMBOLS_FILE = "$(SRCROOT)/../src/exports.exp";
 				LIBRARY_SEARCH_PATHS = (
@@ -346,6 +347,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9183A4A916A6FD5D00161704 /* BuildSettings.xcconfig */;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				EXECUTABLE_PREFIX = lib;
 				EXPORTED_SYMBOLS_FILE = "$(SRCROOT)/../src/exports.exp";
 				LIBRARY_SEARCH_PATHS = (

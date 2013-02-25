@@ -17,6 +17,7 @@
  */
 
 #include <stdio.h>
+#include <unistd.h>
 #include "leap_c.h"
 
 void on_init(leap_controller_ref controller, void *user_info)
@@ -50,34 +51,37 @@ void on_frame(leap_controller_ref controller, void *user_info)
 
         for (int p = 0; p < leap_hand_fingers_count(hand); p++) {
             leap_pointable_ref pointable = leap_hand_finger_at_index(hand, p);
-            leap_vector tip_position = leap_pointable_tip_position(pointable);
+            leap_vector tip_position;
+            leap_pointable_tip_position(pointable, &tip_position);
             printf("\t\tfinger %i: tip-pos={%0.2f, %0.2f, %0.2f}\n",
                    leap_pointable_id(pointable), tip_position.x, tip_position.y, tip_position.z);
         }
 
         for (int p = 0; p < leap_hand_tools_count(hand); p++) {
             leap_pointable_ref pointable = leap_hand_tool_at_index(hand, p);
-            leap_vector tip_position = leap_pointable_tip_position(pointable);
+            leap_vector tip_position;
+            leap_pointable_tip_position(pointable, &tip_position);
             printf("\t\ttool   %i: tip-pos={%0.2f, %0.2f, %0.2f}\n",
                    leap_pointable_id(pointable), tip_position.x, tip_position.y, tip_position.z);
         }
     }
-    leap_frame_delete(frame);
+    leap_frame_release(frame);
 }
 
 
 int main(int argc, const char * argv[])
 {
-    leap_controller_ref controller = leap_controller_new();
     struct leap_controller_callbacks callbacks;
     callbacks.on_init = on_init;
     callbacks.on_connect = on_connect;
     callbacks.on_disconnect = on_disconnect;
     callbacks.on_exit = on_exit;
     callbacks.on_frame = on_frame;
+
     leap_listener_ref listener = leap_listener_new(&callbacks, NULL);
+    leap_controller_ref controller = leap_controller_new();
     leap_controller_add_listener(controller, listener);
 
-    do {} while(1);
+    do { sleep(1); } while(1);
     return 0;
 }

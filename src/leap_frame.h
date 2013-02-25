@@ -25,9 +25,10 @@
 extern "C" {
 #endif
 
-    void leap_frame_delete(leap_frame_ref frame);
-
+    void leap_frame_retain(leap_frame_ref frame);
+    void leap_frame_release(leap_frame_ref frame);
     int64_t leap_frame_id(leap_frame_ref frame);
+
     int64_t leap_frame_timestamp(leap_frame_ref frame);
 
     int leap_frame_hands_count(leap_frame_ref frame);
