@@ -1,21 +1,18 @@
 # C wrapper around the Leap Motion library
 
-
 ## Overview
 
-This is a work in progress wrapper around the C++ Leap Motion library.
+This is a work in progress, although well advanced and stable enough to be used in any application.
 
-The idea is to have a minimalistic C API for easy integration with other languages like Common Lisp or Lua.
+The LeapC library defines a C wrapper around the C++ Leap Motion library.  This wrapper is made so that integration with other languages is compatible, efficient, and easy to understand.  It is written "manually" in contrast to automatically generated wrappers like SWIG, hence the readable result.
 
 It does not cover the entire Leap Motion API, current limitations are:
 
 - There is no distinction between `Fingers` and `Tools`, therefore only `Pointables` are not implemented yet.
 - `Pointables` are available only through their associated `Hands` (not through their `Frame`).
 - "find by id" methods are not implemented yet.
-- methods on `Hand` that give a result relative to a previous `Frame` like `translation` or `rotationAxis` are not implemented yet.
 - Xcode project only, though it should be fairly easy to port the project to Visual Studio and the code is vanilla C.
 - Utilities from the LeapMath library are not implemented, and might never be.
-
 
 ## Usage
 
@@ -28,7 +25,6 @@ It does not cover the entire Leap Motion API, current limitations are:
 ## Feedback and suggestions
 
 Feel free to open a ticket or to send me an email <camille@osculator.net>.
-
 
 
     /*
