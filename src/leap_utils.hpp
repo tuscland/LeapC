@@ -32,7 +32,7 @@ Leap::Vector from_vector(leap_vector const vector)
 inline
 leap_vector to_vector(Leap::Vector const& vector)
 {
-    return {
+    return (leap_vector){
         vector.x,
         vector.y,
         vector.z
