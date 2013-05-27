@@ -1,25 +1,26 @@
 # C wrapper around the Leap Motion library
 
+
 ## Overview
 
 This is a work in progress, although well advanced and stable enough to be used in any application.
 
-The LeapC library defines a C wrapper around the C++ Leap Motion library.  This wrapper is made so that integration with other languages is compatible, efficient, and easy to understand.  It is written "manually" in contrast to automatically generated wrappers like SWIG, hence the readable result.
+The LeapC library is a C wrapper around the C++ Leap Motion library.  This wrapper is made so that integration with other languages is compatible, efficient, and easy to understand.  It is written "manually" in contrast to automatically generated wrappers like SWIG, hence the readable and concise result.
 
-It does not cover the entire Leap Motion API, current limitations are:
+It does not cover the entire Leap Motion API, limitations are:
 
-- There is no distinction between `Fingers` and `Tools`, therefore only `Pointables` are not implemented yet.
-- `Pointables` are available only through their associated `Hands` (not through their `Frame`).
+- At this moment, there is no distinction between `Fingers` and `Tools`, therefore only `Pointables` are implemented.
 - "find by id" methods are not implemented yet.
-- Xcode project only, though it should be fairly easy to port the project to Visual Studio and the code is vanilla C.
+- `Pointables` are available only through their associated `Hands` (not through their `Frame`).
+- Xcode project only, though it should be fairly easy to port the project to Visual Studio and the code is vanilla C, let me know if you need it.
 - Utilities from the LeapMath library are not implemented, and might never be.
 
-## Usage
+
+## Installation and Usage
 
 1. Clone the repository.
-2. Copy or make symbolic links from the Leap.h, LeapMath.h and libLeap.dylib files to the `./vendor/` sub-directory.
-3. Open the Xcode project and relocate the libLeap.dylib shared library so Xcode can find it.
-4. Take a look at the example, it should be fairly easy to understand how to set-up the callbacks.
+2. Copy or make a symbolic link from your LeapSDK directory into the `./vendor/` sub-directory so that you have ./vendor/LeapSDK/ (a symlink is preferred to deal with updates to the Leap library).
+3. Take a look at the example, it should be fairly easy to understand how to set-up the callbacks.
 
 
 ## Feedback and suggestions

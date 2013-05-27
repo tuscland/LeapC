@@ -53,10 +53,10 @@
 		9163A95416A8228400B85F4B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9163A95716A8228400B85F4B /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		9163A96216A877DA00B85F4B /* exports.exp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.exports; path = exports.exp; sourceTree = "<group>"; };
-		9163A99416A98FF000B85F4B /* libLeap.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libLeap.dylib; sourceTree = "<group>"; };
+		9163A99416A98FF000B85F4B /* libLeap.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libLeap.dylib; path = ../../LeapSDK/lib/libLeap.dylib; sourceTree = "<group>"; };
 		9183A49216A6B37B00161704 /* libLeapC.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libLeapC.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		9183A49916A6B39D00161704 /* Leap.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = Leap.h; sourceTree = "<group>"; };
-		9183A49A16A6B39D00161704 /* LeapMath.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = LeapMath.h; sourceTree = "<group>"; };
+		9183A49916A6B39D00161704 /* Leap.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = Leap.h; path = ../../LeapSDK/include/Leap.h; sourceTree = "<group>"; };
+		9183A49A16A6B39D00161704 /* LeapMath.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = LeapMath.h; path = ../../LeapSDK/include/LeapMath.h; sourceTree = "<group>"; };
 		9183A4A116A6B44500161704 /* leap_controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = leap_controller.cpp; sourceTree = "<group>"; };
 		9183A4A316A6B45400161704 /* leap_controller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = leap_controller.h; sourceTree = "<group>"; };
 		9183A4A416A6B9C700161704 /* leap_frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = leap_frame.h; sourceTree = "<group>"; };
@@ -347,7 +347,7 @@
 				EXPORTED_SYMBOLS_FILE = "$(SRCROOT)/../src/exports.exp";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../vendor\"",
+					"\"$(SRCROOT)/../vendor/LeapSDK/lib/\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -362,7 +362,7 @@
 				EXPORTED_SYMBOLS_FILE = "$(SRCROOT)/../src/exports.exp";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../vendor\"",
+					"\"$(SRCROOT)/../vendor/LeapSDK/lib/\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
