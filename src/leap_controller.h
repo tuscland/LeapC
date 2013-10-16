@@ -36,6 +36,13 @@ extern "C" {
     void leap_controller_enable_gesture(leap_controller_ref controller, leap_gesture_type gesture_type, int should_enable);
     int leap_controller_is_gesture_enabled(leap_controller_ref controller, leap_gesture_type gesture_type);
 
+    typedef enum {
+        LEAP_CONTROLLER_POLICY_DEFAULT = 0,
+        LEAP_CONTROLLER_POLICY_BACKGROUND_FRAMES = (1 << 0)
+    } leap_controller_policy_flag;
+    leap_controller_policy_flag leap_controller_policy_get_flags(leap_controller_ref controller);
+    void leap_controller_policy_set_flags(leap_controller_ref controller, leap_controller_policy_flag flags);
+
     /* Listener */
     typedef void (*leap_controller_callback)(leap_controller_ref, void*);
 

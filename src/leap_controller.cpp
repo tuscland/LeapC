@@ -110,6 +110,16 @@ leap_frame_ref leap_controller_copy_frame(leap_controller_ref controller, int hi
     return leap_frame_copy(frame);
 }
 
+leap_controller_policy_flag leap_controller_policy_get_flags(leap_controller_ref controller)
+{
+    return (leap_controller_policy_flag)W(controller).policyFlags();
+}
+
+void leap_controller_policy_set_flags(leap_controller_ref controller, leap_controller_policy_flag flags)
+{
+    W(controller).setPolicyFlags((Leap::Controller::PolicyFlag)flags);
+}
+
 void leap_controller_add_listener(leap_controller_ref controller, leap_listener_ref listener)
 {
     assert(W(listener).getController() == 0);

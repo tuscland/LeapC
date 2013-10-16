@@ -82,6 +82,8 @@ _leap_controller_add_listener
 _leap_controller_remove_listener
 _leap_controller_enable_gesture
 _leap_controller_is_gesture_enabled
+_leap_controller_policy_get_flags
+_leap_controller_policy_set_flags
 
 _leap_listener_new
 _leap_listener_delete
