@@ -41,7 +41,7 @@ extern "C" {
     int leap_frame_equal(leap_frame_ref frame, leap_frame_ref other);
 
 #ifdef __cplusplus
-} /* closing brace for extern "C" */
+}
 #endif
 
 #endif

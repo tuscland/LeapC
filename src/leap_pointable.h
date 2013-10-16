@@ -41,7 +41,7 @@ extern "C" {
     int leap_pointable_equal(leap_pointable_ref pointable, leap_pointable_ref other);
 
 #ifdef __cplusplus
-} /* closing brace for extern "C" */
+}
 #endif
 
 #endif

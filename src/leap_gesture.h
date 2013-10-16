@@ -24,13 +24,6 @@
 extern "C" {
 #endif
 
-    typedef enum {
-        LEAP_GESTURE_STATE_INVALID = -1,
-        LEAP_GESTURE_STATE_START   =  1,
-        LEAP_GESTURE_STATE_UPDATE  =  2,
-        LEAP_GESTURE_STATE_STOP    =  3
-    } leap_gesture_state;
-
     void leap_gesture_retain(leap_gesture_ref gesture);
     void leap_gesture_release(leap_gesture_ref gesture);
     int32_t leap_gesture_id(leap_gesture_ref gesture);
@@ -68,7 +61,7 @@ extern "C" {
     leap_pointable_ref leap_gesture_key_tap_copy_pointable(leap_gesture_ref gesture);
 
 #ifdef __cplusplus
-} /* closing brace for extern "C" */
+}
 #endif
 
 #endif /* defined(LeapC_leap_gesture_h) */

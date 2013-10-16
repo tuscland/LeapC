@@ -39,16 +39,40 @@ extern "C" {
     };
     typedef struct _leap_vector leap_vector;
 
-    typedef enum {
+    enum _leap_controller_policy_flag {
+        LEAP_CONTROLLER_POLICY_DEFAULT = 0,
+        LEAP_CONTROLLER_POLICY_BACKGROUND_FRAMES = (1 << 0)
+    };
+    typedef _leap_controller_policy_flag leap_controller_policy_flag;
+
+    enum _leap_gesture_type {
         LEAP_GESTURE_TYPE_INVALID    = -1,
         LEAP_GESTURE_TYPE_SWIPE      =  1,
         LEAP_GESTURE_TYPE_CIRCLE     =  4,
         LEAP_GESTURE_TYPE_SCREEN_TAP =  5,
         LEAP_GESTURE_TYPE_KEY_TAP    =  6
-    } leap_gesture_type;
+    };
+    typedef enum _leap_gesture_type leap_gesture_type;
+
+    enum _leap_gesture_state {
+        LEAP_GESTURE_STATE_INVALID = -1,
+        LEAP_GESTURE_STATE_START   =  1,
+        LEAP_GESTURE_STATE_UPDATE  =  2,
+        LEAP_GESTURE_STATE_STOP    =  3
+    };
+    typedef enum _leap_gesture_state leap_gesture_state;
+
+    typedef void (*leap_controller_callback)(leap_controller_ref, void*);
+    struct leap_controller_callbacks {
+        leap_controller_callback on_init;
+        leap_controller_callback on_connect;
+        leap_controller_callback on_disconnect;
+        leap_controller_callback on_exit;
+        leap_controller_callback on_frame;
+    };
 
 #ifdef __cplusplus
-} /* closing brace for extern "C" */
+}
 #endif
 
 #endif

@@ -49,7 +49,7 @@ extern "C" {
     int leap_hand_equal(leap_hand_ref hand, leap_hand_ref other);
 
 #ifdef __cplusplus
-} /* closing brace for extern "C" */
+}
 #endif
 
 

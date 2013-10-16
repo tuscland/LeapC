@@ -35,30 +35,15 @@ extern "C" {
     void leap_controller_remove_listener(leap_controller_ref controller, leap_listener_ref listener);
     void leap_controller_enable_gesture(leap_controller_ref controller, leap_gesture_type gesture_type, int should_enable);
     int leap_controller_is_gesture_enabled(leap_controller_ref controller, leap_gesture_type gesture_type);
-
-    typedef enum {
-        LEAP_CONTROLLER_POLICY_DEFAULT = 0,
-        LEAP_CONTROLLER_POLICY_BACKGROUND_FRAMES = (1 << 0)
-    } leap_controller_policy_flag;
     leap_controller_policy_flag leap_controller_policy_get_flags(leap_controller_ref controller);
     void leap_controller_policy_set_flags(leap_controller_ref controller, leap_controller_policy_flag flags);
 
     /* Listener */
-    typedef void (*leap_controller_callback)(leap_controller_ref, void*);
-
-    struct leap_controller_callbacks {
-        leap_controller_callback on_init;
-        leap_controller_callback on_connect;
-        leap_controller_callback on_disconnect;
-        leap_controller_callback on_exit;
-        leap_controller_callback on_frame;
-    };
-
     leap_listener_ref leap_listener_new(struct leap_controller_callbacks* callbacks, void *user_info);
     void leap_listener_delete(leap_listener_ref listener);
 
 #ifdef __cplusplus
-} /* closing brace for extern "C" */
+}
 #endif
 
 #endif
